@@ -1,0 +1,103 @@
+openapi: 3.1.0
+info:
+  title: FRIDA Car Insurance Policy Cards
+  description:
+    $ref: "./description_en.md"
+  termsOfService: "https://github.com/FRIDA-official"
+  contact:
+    name: Vinh Hoi Le Chau
+    url: "https://www.missmp.eu"
+    email: vinh.lechau@missmp.eu
+  version: 0.0.1
+servers:
+  - url: "https://test-api-impl-backend-jaxrs.herokuapp.com/v2"
+    description: Staging
+  - url: "https://test-api-impl-backend-jaxrs.xyz.com/v2"
+    description: Production
+paths:
+  /policies/passes:
+    post:
+      summary: Create Policy Pass
+      # security:
+      #   - oAuth2:
+      #       - ContractDetails
+      tags:
+        - Passes
+    delete:
+      summary: Delete Policy Pass
+      # security:
+      #   - oAuth2:
+      #       - ContractDetails
+      tags:
+        - Passes
+    put:
+      summary: Update Policy Pass
+      # security:
+      #   - oAuth2:
+      #       - ContractDetails
+      tags:
+        - Passes
+      responses:
+        "200":
+          description: Success
+          content:
+            application/json:
+              content:
+                type: object
+              # schema:
+              #   $ref: "#/components/schemas/ContractDetailsResponse"
+        "403":
+          description: Authorization error
+          # content:
+          #   application/json:
+          #     schema:
+          #       $ref: "#/components/schemas/ErrorList"
+        "500":
+          description: Generic Error
+          # content:
+          #   application/json:
+          #     schema:
+          #       $ref: "#/components/schemas/ErrorList"
+  /policies/webhooks:
+    post:
+      summary: Create Policy Webhook
+      # security:
+      #   - oAuth2:
+      #       - ContractDetails
+      tags:
+        - Webhooks
+    put:
+      summary: Update Policy Webhook
+      # security:
+      #   - oAuth2:
+      #       - ContractDetails
+      tags:
+        - Webhooks
+      responses:
+        "200":
+          description: Success
+          content:
+            application/json:
+              content:
+                type: object
+              # schema:
+              #   $ref: "#/components/schemas/ContractDetailsResponse"
+        "403":
+          description: Authorization error
+          # content:
+          #   application/json:
+          #     schema:
+          #       $ref: "#/components/schemas/ErrorList"
+        "500":
+          description: Generic Error
+          # content:
+          #   application/json:
+          #     schema:
+          #       $ref: "#/components/schemas/ErrorList"
+    delete:
+      summary: Delete Policy Webhook
+      # security:
+      #   - oAuth2:
+      #       - ContractDetails
+      tags:
+        - Webhooks

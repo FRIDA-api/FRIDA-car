@@ -1,0 +1,27 @@
+sequenceDiagram
+    autonumber
+    participant is as Insurance
+    participant ps as Pass Service Provider
+    participant ph as Policyholder
+    participant ao as Accident Opponent
+    is-)ps: Policy Data
+    ps-)ph: Policy Card
+    ph-)ps: Register Policy Card
+    opt Webhook
+    ps-)is: Event: Policy Card Registered
+    end
+    is-)ps: Updated Policy Data
+    ps-)ph: Update Policy Card
+    ao->>ph: Scan QR from Card
+    ph-->>ao: URL to Contact Card
+    ao->>ps: Request Contact Card
+    ps-->>ao: Contact Card
+    opt Webhook
+    ps-)is: Event: Contact Card Requested
+    end
+    opt Delete
+        ph-->>ps: Delete Card
+    end
+    opt Webhook
+    ps-)is: Event: Policy Card Deleted
+    end
