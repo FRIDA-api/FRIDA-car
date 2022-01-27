@@ -1,0 +1,26 @@
+{
+  "name": "frida-car",
+  "version": "0.1.0",
+  "description": "FRIDA Car Insurance Policy Cards",
+  "main": "index.html",
+  "dependencies": {
+    "install": "^0.13.0",
+    "npm": "^8.3.2"
+  },
+  "devDependencies": {
+    "@mermaid-js/mermaid-cli": "^8.13.10"
+  },
+  "scripts": {
+    "mermaid": "mmdc -i sequence.mmd"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/FRIDA-api/FRIDA-car.git"
+  },
+  "author": "Vinh Hoi Le Chau",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/FRIDA-api/FRIDA-car/issues"
+  },
+  "homepage": "https://github.com/FRIDA-api/FRIDA-car#readme"
+}
