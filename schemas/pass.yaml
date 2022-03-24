@@ -102,14 +102,4 @@ required:
 - firstname
 - lastname
 - policy_number
-- coverage_back
-- additional_services_back
-- ncb_back
-- make_model_back
-- VIN_back
-- mileage_back
-- regdate_back
-- generic_details_back_1
-- generic_details_back_2
-- generic_details_back_3
 type: object
