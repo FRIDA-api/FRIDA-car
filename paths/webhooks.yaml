@@ -1,0 +1,48 @@
+post:
+  summary: Create Policy Webhook
+  # security:
+  #   - oAuth2:
+  #       - ContractDetails
+  responses:
+    "200":
+      description: Success
+  tags:
+    - Webhooks
+put:
+  summary: Update Policy Webhook
+  # security:
+  #   - oAuth2:
+  #       - ContractDetails
+  tags:
+    - Webhooks
+  responses:
+    "200":
+      description: Success
+      # content:
+      #   application/json:
+      #     content:
+      #       type: object
+          # schema:
+          #   $ref: "#/components/schemas/ContractDetailsResponse"
+    "403":
+      description: Authorization error
+      # content:
+      #   application/json:
+      #     schema:
+      #       $ref: "#/components/schemas/ErrorList"
+    "500":
+      description: Generic Error
+      # content:
+      #   application/json:
+      #     schema:
+      #       $ref: "#/components/schemas/ErrorList"
+delete:
+  summary: Delete Policy Webhook
+  # security:
+  #   - oAuth2:
+  #       - ContractDetails
+  responses:
+    "200":
+      description: Success
+  tags:
+    - Webhooks

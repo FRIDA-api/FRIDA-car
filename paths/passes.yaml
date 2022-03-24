@@ -1,0 +1,52 @@
+post:
+  summary: Create Policy Pass
+  # security:
+  #   - oAuth2:
+  #       - ContractDetails
+  requestBody:
+    content:
+      application/json:
+        schema:
+          $ref: "../schemas/pass.yaml"
+  responses:
+    "200":
+      description: Success
+  tags:
+    - Passes
+delete:
+  summary: Delete Policy Pass
+  # security:
+  #   - oAuth2:
+  #       - ContractDetails
+  responses:
+    "200":
+      description: Success
+  tags:
+    - Passes
+put:
+  summary: Update Policy Pass
+  # security:
+  #   - oAuth2:
+  #       - ContractDetails
+  tags:
+    - Passes
+  responses:
+    "200":
+      description: Success
+      # content:
+      #   application/json:
+          # type: object
+          # schema:
+          #   $ref: "#/components/schemas/ContractDetailsResponse"
+    "403":
+      description: Authorization error
+      # content:
+      #   application/json:
+      #     schema:
+      #       $ref: "#/components/schemas/ErrorList"
+    "500":
+      description: Generic Error
+      # content:
+      #   application/json:
+      #     schema:
+      #       $ref: "#/components/schemas/ErrorList"

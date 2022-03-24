@@ -1,0 +1,115 @@
+description: Holds all information required to manage and render a car insurance pass.
+properties:
+  VIN_back:
+    description: Vehicle Details text
+    type: string
+  additional_services_back:
+    description: Additional services field text
+    type: string
+  coverage_back:
+    description: Coverage field text
+    type: string
+  firstname:
+    description: Insurance Holder name and title
+    type: string
+  generic_boolean_1:
+    description: Generic fields 8.ff serve as additional content fields provided through
+      API. Additional back fields can be included in the pass.
+    type: boolean
+  generic_boolean_2:
+    description: Generic fields 8.ff serve as additional content fields provided through
+      API. Additional back fields can be included in the pass.
+    type: boolean
+  generic_date_1:
+    description: Generic fields 8.ff serve as additional content fields provided through
+      API. Additional back fields can be included in the pass.
+    type: string
+  generic_date_2:
+    description: Generic fields 8.ff serve as additional content fields provided through
+      API. Additional back fields can be included in the pass.
+    type: string
+  generic_details_back_1:
+    description: Generic fields 8.ff serve as additional content fields provided through
+      API. Additional back fields can be included in the pass.
+    type: string
+  generic_details_back_2:
+    description: Generic fields 8.ff serve as additional content fields provided through
+      API. Additional back fields can be included in the pass.
+    type: string
+  generic_details_back_3:
+    description: Generic fields 8.ff serve as additional content fields provided through
+      API. Additional back fields can be included in the pass.
+    type: string
+  generic_number_1:
+    description: Generic fields 8.ff serve as additional content fields provided through
+      API. Additional back fields can be included in the pass.
+    type: integer
+  generic_number_2:
+    description: Generic fields 8.ff serve as additional content fields provided through
+      API. Additional back fields can be included in the pass.
+    type: integer
+  generic_string_1:
+    description: Generic fields 8.ff serve as additional content fields provided through
+      API. Additional back fields can be included in the pass.
+    type: string
+  generic_string_2:
+    description: Generic fields 8.ff serve as additional content fields provided through
+      API. Additional back fields can be included in the pass.
+    type: string
+  generic_string_3:
+    description: Generic fields 8.ff serve as additional content fields provided through
+      API. Additional back fields can be included in the pass.
+    type: string
+  generic_string_4:
+    description: Generic fields 8.ff serve as additional content fields provided through
+      API. Additional back fields can be included in the pass.
+    type: string
+  generic_string_5:
+    description: Generic fields 8.ff serve as additional content fields provided through
+      API. Additional back fields can be included in the pass.
+    type: string
+  generic_string_6:
+    description: Generic fields 8.ff serve as additional content fields provided through
+      API. Additional back fields can be included in the pass.
+    type: string
+  lastname:
+    description: Insurance Holder name and title
+    type: string
+  make_model_back:
+    description: Vehicle Details text
+    type: string
+  mileage_back:
+    description: Vehicle Details text
+    type: string
+  ncb_back:
+    description: Vehicle Details text
+    type: string
+  policy_number:
+    description: Policy Number Headline
+    type: string
+  regdate_back:
+    description: Vehicle Details text
+    type: string
+  title:
+    description: Insurance Holder name and title
+    type: string
+  vehicle_reg:
+    description: Vehicle Registration content
+    type: string
+required:
+- vehicle_reg
+- title
+- firstname
+- lastname
+- policy_number
+- coverage_back
+- additional_services_back
+- ncb_back
+- make_model_back
+- VIN_back
+- mileage_back
+- regdate_back
+- generic_details_back_1
+- generic_details_back_2
+- generic_details_back_3
+type: object
