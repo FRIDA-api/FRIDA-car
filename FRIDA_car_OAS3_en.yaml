@@ -1,4 +1,4 @@
-openapi: 3.1.0
+openapi: 3.0.1
 info:
   title: FRIDA Car Insurance Policy Cards
   description:
@@ -21,6 +21,9 @@ paths:
       # security:
       #   - oAuth2:
       #       - ContractDetails
+      responses:
+        "200":
+          description: Success
       tags:
         - Passes
     delete:
@@ -28,6 +31,9 @@ paths:
       # security:
       #   - oAuth2:
       #       - ContractDetails
+      responses:
+        "200":
+          description: Success
       tags:
         - Passes
     put:
@@ -40,10 +46,9 @@ paths:
       responses:
         "200":
           description: Success
-          content:
-            application/json:
-              content:
-                type: object
+          # content:
+          #   application/json:
+              # type: object
               # schema:
               #   $ref: "#/components/schemas/ContractDetailsResponse"
         "403":
@@ -64,6 +69,9 @@ paths:
       # security:
       #   - oAuth2:
       #       - ContractDetails
+      responses:
+        "200":
+          description: Success
       tags:
         - Webhooks
     put:
@@ -76,10 +84,10 @@ paths:
       responses:
         "200":
           description: Success
-          content:
-            application/json:
-              content:
-                type: object
+          # content:
+          #   application/json:
+          #     content:
+          #       type: object
               # schema:
               #   $ref: "#/components/schemas/ContractDetailsResponse"
         "403":
@@ -99,5 +107,8 @@ paths:
       # security:
       #   - oAuth2:
       #       - ContractDetails
+      responses:
+        "200":
+          description: Success
       tags:
         - Webhooks
