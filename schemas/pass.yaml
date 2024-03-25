@@ -7,7 +7,7 @@ properties:
     description: Coverage field text
     type: string
   firstName:
-    description: Insurance Holder name and title 1
+    description: Insurance Holder name and title
     type: string
   genericDate1:
     description: Generic fields 8.ff serve as additional content fields provided
@@ -91,6 +91,42 @@ properties:
     type: string
   vin:
     description: Vehicle Details text
+    type: string
+  productName:
+    description: Product name text
+    type: string
+  productForm:
+    description: Product Form text
+    type: string
+  branch:
+    description: Branch text
+    type: string
+  excess:
+    description: Excess text
+    type: string
+  hullService:
+    description: Hull Service text
+    type: string
+  coverType:
+    description: Cover Type text
+    type: string
+  protectiveCover:
+    description: Protective Cover text
+    type: string
+  vehicleMake:
+    description: Vehicle Make text
+    type: string
+  birthDate:
+    description: Birthdate text
+    type: string
+  contractManagerName:
+    description: Contract Manager Name text
+    type: string
+  contractManagerPhone:
+    description: Contract Manager Phone Number text
+    type: string
+  contractManagerEmail:
+    description: Contract Manager Email text
     type: string
 required:
 - vehicleReg
