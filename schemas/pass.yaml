@@ -9,62 +9,6 @@ properties:
   firstName:
     description: Insurance Holder name and title
     type: string
-  genericDate1:
-    description: Generic fields 8.ff serve as additional content fields provided
-      through API. Additional back fields can be included in the pass.
-    type: string
-  genericDate2:
-    description: Generic fields 8.ff serve as additional content fields provided
-      through API. Additional back fields can be included in the pass.
-    type: string
-  genericDetails1:
-    description: Generic fields 8.ff serve as additional content fields provided
-      through API. Additional back fields can be included in the pass.
-    type: string
-  genericDetails2:
-    description: Generic fields 8.ff serve as additional content fields provided
-      through API. Additional back fields can be included in the pass.
-    type: string
-  genericDetails3:
-    description: Generic fields 8.ff serve as additional content fields provided
-      through API. Additional back fields can be included in the pass.
-    type: string
-  genericNumber1:
-    description: Generic fields 8.ff serve as additional content fields provided
-      through API. Additional back fields can be included in the pass.
-    type: integer
-  genericNumber2:
-    description: Generic fields 8.ff serve as additional content fields provided
-      through API. Additional back fields can be included in the pass.
-    type: integer
-  genericString1:
-    description: Generic fields 8.ff serve as additional content fields provided
-      through API. Additional back fields can be included in the pass.
-    type: string
-  genericString2:
-    description: Generic fields 8.ff serve as additional content fields provided
-      through API. Additional back fields can be included in the pass.
-    type: string
-  genericString3:
-    description: Generic fields 8.ff serve as additional content fields provided
-      through API. Additional back fields can be included in the pass.
-    type: string
-  genericString4:
-    description: Generic fields 8.ff serve as additional content fields provided
-      through API. Additional back fields can be included in the pass.
-    type: string
-  genericString5:
-    description: Generic fields 8.ff serve as additional content fields provided
-      through API. Additional back fields can be included in the pass.
-    type: string
-  genericString6:
-    description: Generic fields 8.ff serve as additional content fields provided
-      through API. Additional back fields can be included in the pass.
-    type: string
-  genericboolean1:
-    description: Generic fields 8.ff serve as additional content fields provided
-      through API. Additional back fields can be included in the pass.
-    type: boolean
   lastName:
     description: Insurance Holder name and title
     type: string
