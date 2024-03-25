@@ -116,6 +116,9 @@ properties:
   vehicleMake:
     description: Vehicle Make text
     type: string
+  vehicleType:
+    description: Vehicle Type text
+    type: string
   birthDate:
     description: Birthdate text
     type: string
