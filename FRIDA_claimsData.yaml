@@ -15,7 +15,7 @@ externalDocs:
 paths:
   /claimsdata:
     $ref: paths/claims.yaml
-  /claimsdata/{pid}:
+  /claimsdata/{policyNumber}:
     $ref: paths/claims_queries.yaml
     parameters:
       - $ref: '#/components/parameters/policyNumber'
@@ -27,7 +27,7 @@ components:
       $ref: schemas/person.yaml
     Policyholder:
       $ref: schemas/policyholder.yaml
-    Vehicle_Driver:
+    VehicleDriver:
       $ref: schemas/vehicleDriver.yaml
     ErrorList:
       $ref: schemas/errorList.yaml

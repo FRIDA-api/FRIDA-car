@@ -1,51 +1,50 @@
 description: Holds all information of the Policyholder.
 properties:
-  personal_information: 
+  personalInformation: 
     $ref: "person.yaml"
-  input_tax_deduction:
+  inputTaxDeduction:
     type: string
+    description: ja/nein
     enum:
       - not_specified
       - "false"
       - "true"
-  car_brand:
+  vehicleMake:
     type: string
+    description: BMW || will be extracted from <Policy Pass>
     example: BMW
-    description: will be extracted from <Policy Pass>
-  car_type:
+  vehicleType:
     type: string
+    description: 330d || will be extracted from <Policy Pass>
     example: 330d
-    description: will be extracted from <Policy Pass>
-  car_numberplate:
+  vehicleReg:
     type: string
+    description: will be extracted from <Policy Pass>
     example: BM LD1234
-    description: will be extracted from <Policy Pass>
-  insurance_company:
+  insuranceCompany:
     type: string
-    description: will be extracted from <Companion Pass>
+    description: HDI || will be extracted from <Companion Pass>
     example: HDI
-  policy_number:
+  policyNumber:
     type: string
-    example: v-123-345-678-5
-    description: will be extracted from <Policy Pass>
-  chassy_number:
+    description: V-123-345-678-5 || will be extracted from <Policy Pass>
+    example: V-123-345-678-5
+  vin:
     type: string
+    description: W0L000051T2123456 || will be extracted from <Policy Pass>
     example: W0L000051T2123456
-    description: will be extracted from <Policy Pass>
-  current_mileage:
-    type: integer
-    example: 345
-  previous_year_mileage:
-    type: integer
-    example: 426
-    description: Mileage in the previous year
-  greencard_number:
+  currentMileage:
+    type: integer 
+    description: aktueller Kilometerstand
+    example: 12.333
+  greencardNumber:
     type: string
-  greencard_expirydate:
+  greencardExpirydate:
     type: string
     format: date
-  comprehensive_insurance:
+  comprehensiveInsurance:
     type: string
+    description: ja/nein
     enum:
       - not_specified
       - "false"

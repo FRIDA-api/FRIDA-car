@@ -1,36 +1,59 @@
 description: Holds all information of the Vehicle Driver.
 properties:
-  personal_information:
+  personalInformation:
     $ref: "person.yaml"
-  driver_licensenumber:
+  driverLicensenumber:
     type: string
-  license_issued_by:
+    description: Führerscheinnummer
+  licenseIssuedBy:
     type: string
-  damaged_car_image:
+    description: Führerschein ausgestellt von
+  damagedCarImage:
     type: array
+    description: Bild vom Schaden
     items:
       format: base64
       description: picture converted to base64 || native FileAPI des Clients (Dunkelverarbeitung)
-  damaged_windows:
-    type: array
-    description: Entscheidung ob benötigt y/n -> da nur für Glasschaden relevant
-    items:
-      type: string
-  driver_damagedparts_graphic:
+  # damaged_windows:
+  #   type: array
+  #   description: Entscheidung ob benötigt y/n -> da nur für Glasschaden relevant
+  #   items:
+  #     type: string
+  driverDamagedpartsGraphic:
     type: string
-    format: base64
-    description: client can click together his damaged car parts in the front end // refinement offen
-  driver_visible_damage:
+    description: Auswahl der beschädigten Stellen, A,B,C… || client can click together his damaged car parts in the front end // refinement offen
+    enum:
+    - vorne links
+    - Seite vorne links
+    - Fahrertür links
+    - hintere Tür links
+    - Seite hinten links
+    - hinten links
+    - vorne rechts
+    - Seite vorne rechts
+    - Beifahrertür rechts
+    - Seite hinten rechts
+    - hinten rechts
+    - Motorhaube
+    - Frontscheibe
+    - Dach
+    - Heckscheibe
+    - Kofferraum
+  driverVisibleDamage:
     type: string
-  driver_comments:
+    description: Beschreibung sichtbare Schäden    
+  driverComments:
     type: string
-  vehicle_driving_ability:
+    description: Bemerkungen des Fahrers
+  vehicleDrivingAbility:
     type: string
+    description: Fahrbereitschaft des Fahrzeugs ja/nein
     enum:
       - "true"
       - "false"
-  damage_caused_by:
+  damageCausedBy:
     type: string
+    description: Auswahl der Schadenursache 
     enum:
       - drive up
       - maneuvering / parking
@@ -40,4 +63,20 @@ properties:
       - overtaking
       - lane change
       - other
+  additional_pictures:
+    type: array
+    items:
+      format: base64
+      description: picture converted to base64 || native FileAPI des Clients (Dunkelverarbeitung)
+  typeOfWildlife:
+    type: string
+    description: Tierart
+    example: Rehwild
+  certificateForWildlife:
+    type: string
+    description: Bestätigung durch Förster || native FileAPI des Clients (Dunkelverarbeitung) || optional
+  garageLocation:
+    type: string
+    description: Werkstatt Standort
+    example: 50°56’28.8″N 6°57’30.0
 type: object

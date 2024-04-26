@@ -1,30 +1,47 @@
 description: Holds all information of a Person who could be a Witness or part of a Policyholder or Vehicle Driver. - will be extracted from <Companion Pass>
 properties:
-  form_of_adress:
+  formOfAdress:
     type: string
+    description: Anrede
     enum:
       - no_adress
       - Mr.
       - Mrs.
-  lastname:
+  title:
+    type: string
+    description: Titel
+    enum:
+      - Dr.
+      - Dr. Dr.
+      - Prof.
+  lastName:
     type: string
     example: Schmitz
-  firstname:
+  firstName:
     type: string
     example: Ralf
-  plz:
+  postalCode:
     type: string
-    example: "50181"
+    description: PLZ
+    example: 50181
   city:
     type: string
+    description: Ort
     example: Bedburg
-  streetname:
+  streetName:
     type: string
+    description: Straße
     example: Am Kleefeldchen 1
-  phonenumber:
+  streetNumber:
     type: string
+    description: Hausnummer
     example: +49(40)321070
-  e-mail:
+  phoneNumber:
     type: string
+    description: Telefonnummer
+    example: +49(40)321070
+  eMailAdress:
+    type: string
+    description: E-Mail Adresse
     example: example@gmail.com
 type: object
