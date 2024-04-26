@@ -1,0 +1,27 @@
+
+description: Error object
+properties:
+  errors:
+    type: array
+    items:
+      type: object
+      required:
+        - code
+        - title
+        - detail
+      properties:
+        code:
+          type: string
+          description: The code of the error
+        title:
+          type: string
+          description: A displayable title of the error type
+        detail:
+          type: string
+          description: Detail of the error
+        meta:
+          type: object
+          description: Optional additional data for specific error types
+required:
+  - errors
+type: object

@@ -1,0 +1,53 @@
+description: Holds all information of the Policyholder.
+properties:
+  personal_information: 
+    $ref: "person.yaml"
+  input_tax_deduction:
+    type: string
+    enum:
+      - not_specified
+      - "false"
+      - "true"
+  car_brand:
+    type: string
+    example: BMW
+    description: will be extracted from <Policy Pass>
+  car_type:
+    type: string
+    example: 330d
+    description: will be extracted from <Policy Pass>
+  car_numberplate:
+    type: string
+    example: BM LD1234
+    description: will be extracted from <Policy Pass>
+  insurance_company:
+    type: string
+    description: will be extracted from <Companion Pass>
+    example: HDI
+  policy_number:
+    type: string
+    example: v-123-345-678-5
+    description: will be extracted from <Policy Pass>
+  chassy_number:
+    type: string
+    example: W0L000051T2123456
+    description: will be extracted from <Policy Pass>
+  current_mileage:
+    type: integer
+    example: 345
+  previous_year_mileage:
+    type: integer
+    example: 426
+    description: Mileage in the previous year
+  greencard_number:
+    type: string
+  greencard_expirydate:
+    type: string
+    format: date
+  comprehensive_insurance:
+    type: string
+    enum:
+      - not_specified
+      - "false"
+      - "true"
+type: object

@@ -1,0 +1,29 @@
+get:
+  operationId: get-claimdata-byId
+  summary: Gets a Claim-Data-Set
+  # security:
+  #   - oAuth2:
+  #       - create_Claims
+  parameters:
+    - $ref: "../parameters/policyNumber.yaml"
+  responses:
+    "200":
+      description: OK
+      content:
+        application/json:
+          schema:
+            $ref: "../schemas/claimsData.yaml"
+put:
+  operationId: replace-claimdata-byId
+  summary: Changes a Claims-Data-Set
+  # security:
+  #   - oAuth2:
+  #       - create_Claims
+  parameters:
+    - $ref: "../parameters/policyNumber.yaml"
+  requestBody:
+    $ref: "../FRIDA_claimsData.yaml#/components/requestBodies/Claimdata"
+  responses:
+    "200":
+      description: Fetched a Claim-Data-Set by PolicyNumber
+      $ref: "../FRIDA_claimsData.yaml#/components/responses/Claimdata"

@@ -1,0 +1,8 @@
+name: policyNumber
+in: path
+description: Policy Number Headline
+required: true
+style: simple
+explode: false
+schema:
+  type: string

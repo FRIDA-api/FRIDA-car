@@ -1,0 +1,58 @@
+openapi: 3.1.0
+info:
+  title: FRIDA Car - Claims Data Schema
+  description:
+    $ref: "./descriptionClaim_en.md"
+  termsOfService: "https://github.com/FRIDA-official"
+  contact:
+    name: Florian Neuß
+    email: floneuss99@gmail.com
+    url: "https://github.com/FRIDA-api/FRIDA-car  (refinement offen)"
+  version: 1.0
+externalDocs:
+  description: Hier folgt noch ein Verweis auf die externe Doku
+  url: "http://swagger.io"
+paths:
+  /claimsdata:
+    $ref: paths/claims.yaml
+  /claimsdata/{pid}:
+    $ref: paths/claims_queries.yaml
+    parameters:
+      - $ref: '#/components/parameters/policyNumber'
+components:
+  schemas:
+    Claimsdata:
+      $ref: schemas/claimsData.yaml
+    Person:
+      $ref: schemas/person.yaml
+    Policyholder:
+      $ref: schemas/policyholder.yaml
+    Vehicle_Driver:
+      $ref: schemas/vehicleDriver.yaml
+    ErrorList:
+      $ref: schemas/errorList.yaml
+  requestBodies:
+    Claimdata:
+      content:
+        application/json:
+          schema:
+            $ref: schemas/claimsData.yaml
+  responses:
+    Claimdata:
+      description: Creates a new Claims-Data-Set
+      content:
+        application/json:
+          schema:
+            $ref: schemas/claimsData.yaml
+  parameters:
+    policyNumber:
+      $ref: parameters/policyNumber.yaml
+  # securitySchemes:
+  #   oAuth2:
+  #     type: oauth2
+  #     flows:
+  #       implicit:
+  #         authorizationUrl: "https://frida-demo.okta.com/oauth2/default/v1/authorize?nonce=kdkdkl"
+  #         scopes:
+  #           create_Claims: Read claims information
+  #           openid: OpenId subject

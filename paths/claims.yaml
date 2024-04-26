@@ -1,0 +1,40 @@
+get:
+  operationId: get-claimdata
+  summary: Gets a list of Claim-Data-Sets
+  # security:
+  #   - oAuth2:
+  #       - create_Claims
+  responses:
+    "201":
+      description: Claim Data
+      content:
+        application/json:
+          schema:
+            $ref: "../schemas/claimsData.yaml"
+post:
+  operationId: create-claims
+  summary: Creates a new Claims-Data-Set || Uses oAuth2
+  # security:
+  #   - oAuth2:
+  #       - create_Claims
+  requestBody:
+        $ref: "../FRIDA_claimsData.yaml#/components/requestBodies/Claimdata"
+  responses:
+    '201':
+      $ref: "../FRIDA_claimsData.yaml#/components/responses/Claimdata"
+    "403":
+      description: Authorization error
+      content:
+        application/json:
+          schema:
+            $ref: "../schemas/errorList.yaml"
+    "500":
+      description: Generic Error
+      content:
+        application/json:
+          schema:
+            $ref: "../schemas/errorList.yaml"
+  parameters:
+    - schema:
+        type: string
+      in: cookie

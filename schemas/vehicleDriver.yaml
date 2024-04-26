@@ -1,0 +1,43 @@
+description: Holds all information of the Vehicle Driver.
+properties:
+  personal_information:
+    $ref: "person.yaml"
+  driver_licensenumber:
+    type: string
+  license_issued_by:
+    type: string
+  damaged_car_image:
+    type: array
+    items:
+      format: base64
+      description: picture converted to base64 || native FileAPI des Clients (Dunkelverarbeitung)
+  damaged_windows:
+    type: array
+    description: Entscheidung ob benötigt y/n -> da nur für Glasschaden relevant
+    items:
+      type: string
+  driver_damagedparts_graphic:
+    type: string
+    format: base64
+    description: client can click together his damaged car parts in the front end // refinement offen
+  driver_visible_damage:
+    type: string
+  driver_comments:
+    type: string
+  vehicle_driving_ability:
+    type: string
+    enum:
+      - "true"
+      - "false"
+  damage_caused_by:
+    type: string
+    enum:
+      - drive up
+      - maneuvering / parking
+      - disregard the right of way
+      - turn
+      - left the lane
+      - overtaking
+      - lane change
+      - other
+type: object

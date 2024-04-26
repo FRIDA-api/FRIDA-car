@@ -1,0 +1,60 @@
+description: Holds all information required for submitting a Comprehensive Claim to the insurance company.
+properties:
+  language:
+    type: string
+    example: DE
+    enum:
+      - DE
+      - EN
+      - FR
+      - ES
+      - IT
+      - NL
+      - PL
+  accident_date:
+    type: string
+    description: Date without time
+    format: date
+  accident_time:
+    type: string
+    description: DateTime format
+    format: datetime
+  accident_coordinates:
+    type: string
+    description: "50°56’28.8″N 6°57’30.0″E Der erste Wert liegt zwischen -90 und 90, die Längengradangabe zwischen -180 und 180. // Nutzt Du die Bogenmaßangaben, muss am Schluss ein „W“ für „West“ oder „E“ für „East“ stehen || Ermittlung über native Geo-API der Applikation (folglich per Dunkelverarbeitung) example: 50°56’28.8″N 6°57’30.0 accident_plz: type: string example: 50181 accident_city: type: string example: Bedburg accident_streetname: type: string example: Am Kleefeldchen 1 additional_description: type: string example: A5 KM 323 injured_persons: type: array items: $ref: "
+  property_damage:
+    type: string
+    enum:
+      - no_information
+      - not_injured
+      - injured
+  witness:
+    type: array
+    items:
+      $ref: "person.yaml"
+  policyholder:
+    maxItems: 2
+    type: array
+    items:
+      $ref: "policyholder.yaml"
+  vehicle_driver:
+    maxItems: 2
+    type: array
+    items:
+      $ref: "vehicleDriver.yaml"
+  additional_pictures:
+    type: array
+    items:
+      format: base64
+      description: picture converted to base64 || native FileAPI des Clients (Dunkelverarbeitung)
+  type_of_wildlife:
+    type: string
+    example: Rehwild
+  certificate_for_wildlife:
+    type: string
+    description: Issued by the police/forester/district owner || native FileAPI des Clients (Dunkelverarbeitung) || optional
+  garage_location:
+    type: string
+    example: 50°56’28.8″N 6°57’30.0
+    description: 50°56’28.8″N 6°57’30.0
+type: object
