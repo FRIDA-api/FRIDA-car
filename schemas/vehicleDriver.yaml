@@ -1,4 +1,4 @@
-description: Holds all information of the Vehicle Driver.
+description: Holds all information of the `Vehicle Driver`.
 properties:
   personalInformation:
     $ref: "person.yaml"

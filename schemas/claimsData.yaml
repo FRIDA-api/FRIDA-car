@@ -1,4 +1,4 @@
-description: Holds all information required for submitting a Comprehensive Claim to the insurance company.
+description: Holds all information required for submitting a `Comprehensive Claim` to the insurance company.
 properties:
   language:
     type: string
@@ -21,7 +21,7 @@ properties:
     format: datetime
   accidentCoordinates:
     type: string
-    description: "50°56’28.8″N 6°57’30.0″E Der erste Wert liegt zwischen -90 und 90, die Längengradangabe zwischen -180 und 180. // Nutzt Du die Bogenmaßangaben, muss am Schluss ein „W“ für „West“ oder „E“ für „East“ stehen || Ermittlung über native Geo-API der Applikation (folglich per Dunkelverarbeitung) example: 50°56’28.8″N 6°57’30.0"
+    description: "50°56’28.8″N 6°57’30.0″E Der erste Wert liegt zwischen -90 und 90, die Längengradangabe zwischen -180 und 180. // Nutzt Du die Bogenmaßangaben, muss am Schluss ein „W“ für „West“ oder „E“ für „East“ stehen"
   accidentPostalCode:
     type: string
     description: PLZ

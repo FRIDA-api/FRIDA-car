@@ -1,4 +1,4 @@
-description: Holds all information of a Person who could be a Witness or part of a Policyholder or Vehicle Driver. - will be extracted from <Companion Pass>
+description: Holds all information of a Person who could either be a `Witness`, or a part of a `Policyholder` or `Vehicle Driver`.
 properties:
   formOfAdress:
     type: string
