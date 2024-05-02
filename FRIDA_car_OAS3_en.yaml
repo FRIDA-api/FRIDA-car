@@ -1,6 +1,6 @@
 openapi: 3.0.1
 info:
-  title: FRIDA Car Insurance Policy Cards test
+  title: FRIDA Car Insurance Policy Cards
   description:
     $ref: "./description_en.md"
   termsOfService: "https://github.com/FRIDA-official"
