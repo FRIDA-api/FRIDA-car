@@ -5,8 +5,8 @@ properties:
     description: Anrede
     enum:
       - no_adress
-      - Mr.
-      - Mrs.
+      - Herr
+      - Frau
   title:
     type: string
     description: Titel

@@ -1,6 +1,6 @@
 openapi: 3.1.0
 info:
-  title: FRIDA Car - Claims Data Schema
+  title: FRIDA Car Claims Data Schema
   description:
     $ref: "./descriptionClaim_en.md"
   termsOfService: "https://github.com/FRIDA-official"
@@ -8,7 +8,10 @@ info:
     name: Florian Neuß
     email: floneuss99@gmail.com
     url: "https://github.com/FRIDA-api/FRIDA-car  (refinement offen)"
-  version: 1.0
+  license:
+    name: MIT
+    url: https://opensource.org/licenses/MIT
+  version: 0.0.1
 servers:
   - url: "https://test-api-impl-backend-jaxrs.herokuapp.com/v2"
     description: Staging

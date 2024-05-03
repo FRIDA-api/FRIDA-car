@@ -4,6 +4,8 @@ get:
   # security:
   #   - oAuth2:
   #       - create_Claims
+  tags:
+    - Claims
   parameters:
     - $ref: "../parameters/policyNumber.yaml"
   responses:
@@ -19,6 +21,8 @@ put:
   # security:
   #   - oAuth2:
   #       - create_Claims
+  tags:
+    - Claims
   parameters:
     - $ref: "../parameters/policyNumber.yaml"
   requestBody:

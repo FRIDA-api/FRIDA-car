@@ -4,6 +4,8 @@ get:
   # security:
   #   - oAuth2:
   #       - create_Claims
+  tags:
+    - Claims
   responses:
     "201":
       description: Claim Data
@@ -13,10 +15,12 @@ get:
             $ref: "../schemas/claimsData.yaml"
 post:
   operationId: create-claims
-  summary: Create new Claim
+  summary: Create Claim
   # security:
   #   - oAuth2:
   #       - create_Claims
+  tags:
+    - Claims
   requestBody:
         $ref: "../FRIDA_claimsData.yaml#/components/requestBodies/Claimdata"
   responses:
@@ -34,7 +38,3 @@ post:
         application/json:
           schema:
             $ref: "../schemas/errorList.yaml"
-  parameters:
-    - schema:
-        type: string
-      in: cookie
