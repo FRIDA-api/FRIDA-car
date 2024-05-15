@@ -44,7 +44,7 @@ properties:
     format: date
   comprehensiveInsurance:
     type: string
-    description: ja/nein
+    description: Vollkaskoversichert ja/nein
     enum:
       - not_specified
       - "false"

@@ -44,9 +44,6 @@ properties:
   accidentPoliceNumber:
     type: string
     example: Unfallnummer der Polizei
-  # additional_description:
-  #   type: string 
-  #   example: A5 KM 323
   propertyDamage:
     type: string
     description: weitere Sachschäden ja/nein
@@ -59,13 +56,17 @@ properties:
     description: Beschreibung Sachschäden
   injuredPerson:
     type: string
-    description: ja/nein
+    description: Verletzte Person ja/nein
+    enum:
+      - not_specified
+      - "false"
+      - "true"
   injuredPersonNumber:
     type: string
     description: Anzahl verletzte Personen
   witnessExists:
     type: string
-    description: ja/nein
+    description: Zeuge ja/nein
     enum:
       - not_specified
       - "false"
@@ -87,4 +88,10 @@ properties:
     type: array
     items:
       $ref: "vehicleDriver.yaml" 
+required:
+  - policyholder
+  - vehicleDriver
+  - propertyDamage
+  - injuredPerson
+  - witnessExists
 type: object

@@ -8,20 +8,23 @@ properties:
   licenseIssuedBy:
     type: string
     description: Führerschein ausgestellt von
-  damagedCarImage:
+  damagedCarImages:
+    maxItems: 8
     type: array
     description: Bild vom Schaden
     items:
       format: base64
       description: picture converted to base64 || native FileAPI des Clients (Dunkelverarbeitung)
-  # damaged_windows:
-  #   type: array
-  #   description: Entscheidung ob benötigt y/n -> da nur für Glasschaden relevant
-  #   items:
-  #     type: string
+  damagedWindowImages:
+    maxItems: 8
+    type: array
+    description: Bild vom Glasschaden
+    items:
+      format: base64
+      description: picture converted to base64 || native FileAPI des Clients (Dunkelverarbeitung)
   driverDamagedpartsGraphic:
     type: string
-    description: Auswahl der beschädigten Stellen, A,B,C… || client can click together his damaged car parts in the front end // refinement offen
+    description: Auswahl der beschädigten Stellen
     enum:
     - vorne links
     - Seite vorne links
@@ -63,11 +66,6 @@ properties:
       - overtaking
       - lane change
       - other
-  additional_pictures:
-    type: array
-    items:
-      format: base64
-      description: picture converted to base64 || native FileAPI des Clients (Dunkelverarbeitung)
   typeOfWildlife:
     type: string
     description: Tierart
