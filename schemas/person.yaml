@@ -40,7 +40,7 @@ properties:
     type: string
     description: Telefonnummer
     example: +49(40)321070
-  eMailAdress:
+  emailAddress:
     type: string
     description: E-Mail Adresse
     example: example@gmail.com

@@ -26,25 +26,25 @@ properties:
     type: string
     description: Auswahl der beschädigten Stellen
     enum:
-    - vorne links
-    - Seite vorne links
-    - Fahrertür links
-    - hintere Tür links
-    - Seite hinten links
-    - hinten links
-    - vorne rechts
-    - Seite vorne rechts
-    - Beifahrertür rechts
-    - Seite hinten rechts
-    - hinten rechts
-    - Motorhaube
-    - Frontscheibe
-    - Dach
-    - Heckscheibe
-    - Kofferraum
+      - vorne links
+      - Seite vorne links
+      - Fahrertür links
+      - hintere Tür links
+      - Seite hinten links
+      - hinten links
+      - vorne rechts
+      - Seite vorne rechts
+      - Beifahrertür rechts
+      - Seite hinten rechts
+      - hinten rechts
+      - Motorhaube
+      - Frontscheibe
+      - Dach
+      - Heckscheibe
+      - Kofferraum
   driverVisibleDamage:
     type: string
-    description: Beschreibung sichtbare Schäden    
+    description: Beschreibung sichtbare Schäden
   driverComments:
     type: string
     description: Bemerkungen des Fahrers
@@ -56,16 +56,17 @@ properties:
       - "false"
   damageCausedBy:
     type: string
-    description: Auswahl der Schadenursache 
+    description: Auswahl der Schadenursache
     enum:
-      - drive up
-      - maneuvering / parking
-      - disregard the right of way
-      - turn
-      - left the lane
-      - overtaking
-      - lane change
-      - other
+      - Auffahren
+      - Rangieren/Parken
+      - Missachtung der Vorfahrt
+      - Abbiegen
+      - Abkommen von der Fahrbahn
+      - Überholvorgang
+      - Spurwechsel
+      - Sonstiges
+    example: Auffahren
   typeOfWildlife:
     type: string
     description: Tierart
