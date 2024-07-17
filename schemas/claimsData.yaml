@@ -13,19 +13,21 @@ properties:
       - PL
   accidentDate:
     type: string
-    description: Date without time
+    description: Unfalldatum ohne Zeit
     format: date
+    example: "2019-08-24"
   accidentTime:
     type: string
-    description: DateTime format
-    format: datetime
+    description: Unfall Zeit
+    format: time
+    example: "08:30:00"
   accidentCoordinates:
     type: string
     description: "50°56’28.8″N 6°57’30.0″E Der erste Wert liegt zwischen -90 und 90, die Längengradangabe zwischen -180 und 180. // Nutzt Du die Bogenmaßangaben, muss am Schluss ein „W“ für „West“ oder „E“ für „East“ stehen"
   accidentPostalCode:
     type: string
     description: PLZ
-    example: 50181
+    example: "50181"
   accidentCity:
     type: string 
     description: Ort
@@ -33,17 +35,18 @@ properties:
   accidentStreetName:
     type: string
     description: Straße
-    example: Am Kleefeldchen 1
+    example: Germaniastraße
   accidentStreetNumber:
     type: string
     description: Hausnummer
-    example: 1
+    example: "1b"
   accidentDescription:
     type: string  
     description: Unfallbeschreibung
   accidentPoliceNumber:
     type: string
-    example: Unfallnummer der Polizei
+    description: Unfallnummer der Polizei
+    example: 2024-ABC123
   propertyDamage:
     type: string
     description: weitere Sachschäden ja/nein
@@ -54,6 +57,7 @@ properties:
   propertyDamageDescription:
     type: string
     description: Beschreibung Sachschäden
+    example: Frontstoßstangenschaden
   injuredPerson:
     type: string
     description: Verletzte Person ja/nein
@@ -77,7 +81,7 @@ properties:
   witness:
     type: array
     items:
-      $ref: "person.yaml"
+      $ref: "witness.yaml"
   policyholder:
     maxItems: 2
     type: array

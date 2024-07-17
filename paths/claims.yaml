@@ -1,6 +1,7 @@
 get:
-  operationId: get-claimdata
+  operationId: getClaim
   summary: Get Claim
+  description: Get Claim
   # security:
   #   - oAuth2:
   #       - create_Claims
@@ -14,8 +15,9 @@ get:
           schema:
             $ref: "../schemas/claimsData.yaml"
 post:
-  operationId: create-claims
+  operationId: createClaim
   summary: Create Claim
+  description: Create Claim
   # security:
   #   - oAuth2:
   #       - create_Claims

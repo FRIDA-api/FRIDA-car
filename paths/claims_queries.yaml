@@ -1,6 +1,7 @@
 get:
-  operationId: get-claimdata-byId
+  operationId: getClaimByPID
   summary: Get Claim by PID
+  description: Get Claim by PID
   # security:
   #   - oAuth2:
   #       - create_Claims
@@ -16,8 +17,9 @@ get:
           schema:
             $ref: "../schemas/claimsData.yaml"
 put:
-  operationId: replace-claimdata-byId
+  operationId: updateClaimByPID
   summary: Update Claim by PID
+  description: Update Claim by PID
   # security:
   #   - oAuth2:
   #       - create_Claims

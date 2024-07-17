@@ -1,4 +1,4 @@
-openapi: 3.1.0
+openapi: '3.0.1'
 info:
   title: FRIDA Car Claims Data Schema
   description:
@@ -7,16 +7,21 @@ info:
   contact:
     name: Florian Neuß
     email: floneuss99@gmail.com
-    url: "https://github.com/FRIDA-api/FRIDA-car  (refinement offen)"
+    url: "https://github.com/FRIDA-api/FRIDA-car"
   license:
     name: MIT
     url: https://opensource.org/licenses/MIT
   version: 0.0.1
 servers:
+  - url: https://stoplight.io/mocks/claimstobe/claims-data-schema/444459889
+    description: Mock API
   - url: "https://test-api-impl-backend-jaxrs.herokuapp.com/v2"
     description: Staging
   - url: "https://test-api-impl-backend-jaxrs.xyz.com/v2"
     description: Production
+tags:
+  - name: Claims
+    description: Claims
 externalDocs:
   description: Hier folgt noch ein Verweis auf die externe Doku
   url: "http://swagger.io"
@@ -35,6 +40,8 @@ components:
       $ref: schemas/person.yaml
     Policyholder:
       $ref: schemas/policyholder.yaml
+    Witness:
+      $ref: schemas/witness.yaml
     VehicleDriver:
       $ref: schemas/vehicleDriver.yaml
     ErrorList:

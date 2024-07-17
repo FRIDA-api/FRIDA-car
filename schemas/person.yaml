@@ -16,14 +16,16 @@ properties:
       - Prof.
   lastName:
     type: string
-    example: Schmitz
+    description: Nachname
+    example: Johnson
   firstName:
     type: string
-    example: Ralf
+    description: Vorname
+    example: Alice
   postalCode:
     type: string
     description: PLZ
-    example: 50181
+    example: "50181"
   city:
     type: string
     description: Ort
@@ -31,11 +33,11 @@ properties:
   streetName:
     type: string
     description: Straße
-    example: Am Kleefeldchen 1
+    example: Germaniastraße
   streetNumber:
     type: string
     description: Hausnummer
-    example: +49(40)321070
+    example: 1b
   phoneNumber:
     type: string
     description: Telefonnummer

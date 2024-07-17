@@ -4,43 +4,45 @@ properties:
     $ref: "person.yaml"
   inputTaxDeduction:
     type: string
-    description: ja/nein
+    description: Vorsteuerabzug ja/nein
     enum:
       - not_specified
       - "false"
       - "true"
   vehicleMake:
     type: string
-    description: BMW || will be extracted from <Policy Pass>
+    description: Fahrzeugmarke || will be extracted from <Policy Pass>
     example: BMW
   vehicleType:
     type: string
-    description: 330d || will be extracted from <Policy Pass>
-    example: 330d
+    description: Fahrzeugmodell || will be extracted from <Policy Pass>
+    example: M5
   vehicleReg:
     type: string
-    description: will be extracted from <Policy Pass>
+    description: Kennzeichen ||will be extracted from <Policy Pass>
     example: BM LD1234
   insuranceCompany:
     type: string
-    description: HDI || will be extracted from <Companion Pass>
+    description: Versicherungsanbieter || will be extracted from <Companion Pass>
     example: HDI
   policyNumber:
     type: string
-    description: V-123-345-678-5 || will be extracted from <Policy Pass>
+    description: Policennummer || will be extracted from <Policy Pass>
     example: V-123-345-678-5
   vin:
     type: string
-    description: W0L000051T2123456 || will be extracted from <Policy Pass>
-    example: W0L000051T2123456
+    description: Fahrzeug-Identifizierungsnummer || will be extracted from <Policy Pass>
+    example: "W0L000051T2123456"
   currentMileage:
     type: integer 
     description: aktueller Kilometerstand
-    example: 12.333
+    example: 1200
   greencardNumber:
     type: string
+    description: Grüne-Karte Nummer
   greencardExpirydate:
     type: string
+    description: Ablaufdatum der Grünen Karte
     format: date
   comprehensiveInsurance:
     type: string

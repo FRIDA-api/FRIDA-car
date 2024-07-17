@@ -1,0 +1,4 @@
+description: Holds all information of a `Witness`.
+properties:
+  personalInformation:
+    $ref: "person.yaml"

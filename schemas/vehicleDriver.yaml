@@ -1,10 +1,11 @@
-description: Holds all information of the `Vehicle Driver`.
+description: Holds all information of a `Vehicle Driver`.
 properties:
   personalInformation:
     $ref: "person.yaml"
   driverLicensenumber:
     type: string
     description: Führerscheinnummer
+    example: DR123456
   licenseIssuedBy:
     type: string
     description: Führerschein ausgestellt von
@@ -73,7 +74,7 @@ properties:
     example: Rehwild
   certificateForWildlife:
     type: string
-    description: Bestätigung durch Förster || native FileAPI des Clients (Dunkelverarbeitung) || optional
+    description: Bestätigung durch Förster || native FileAPI des Clients (Dunkelverarbeitung)
   garageLocation:
     type: string
     description: Werkstatt Standort
