@@ -38,25 +38,27 @@ properties:
           type: string
           description: Pfad zum Bild
   driverDamagedpartsGraphic:
-    type: string
+    type: array
     description: Auswahl der beschädigten Stellen
-    enum:
-      - vorne links
-      - Seite vorne links
-      - Fahrertür links
-      - hintere Tür links
-      - Seite hinten links
-      - hinten links
-      - vorne rechts
-      - Seite vorne rechts
-      - Beifahrertür rechts
-      - Seite hinten rechts
-      - hinten rechts
-      - Motorhaube
-      - Frontscheibe
-      - Dach
-      - Heckscheibe
-      - Kofferraum
+    items:
+      type: string
+      enum:
+        - vorne links
+        - Seite vorne links
+        - Fahrertür links
+        - hintere Tür links
+        - Seite hinten links
+        - hinten links
+        - vorne rechts
+        - Seite vorne rechts
+        - Beifahrertür rechts
+        - Seite hinten rechts
+        - hinten rechts
+        - Motorhaube
+        - Frontscheibe
+        - Dach
+        - Heckscheibe
+        - Kofferraum
   driverVisibleDamage:
     type: string
     description: Beschreibung sichtbare Schäden
@@ -70,17 +72,28 @@ properties:
       - "true"
       - "false"
   damageCausedBy:
-    type: string
+    type: array
     description: Auswahl der Schadenursache
-    enum:
-      - Auffahren
-      - Rangieren/Parken
-      - Missachtung der Vorfahrt
-      - Abbiegen
-      - Abkommen von der Fahrbahn
-      - Überholvorgang
-      - Spurwechsel
-      - Sonstiges
+    items:
+      type: string
+      enum:
+        - war abgestellt
+        - fuhr an
+        - hielt an
+        - fuhr aus Parkplatz, Grundstück oder Feldweg aus
+        - bog in Parkplatz, Grundstück oder Feldweg ein
+        - bog in einen Kreisverkehr ein
+        - fuhr im Kreisverkehr
+        - fuhr auf
+        - fuhr in gleicher Richtung aber anderer Spur
+        - wechselte die Spur
+        - überholte
+        - bog rechts ab
+        - bog links ab
+        - fuhr rückwärts
+        - fuhr in die Gegenfahrbahn
+        - kam von rechts
+        - beachtete Vorfahrtszeichen nicht
     example: Auffahren
   typeOfWildlife:
     type: string
