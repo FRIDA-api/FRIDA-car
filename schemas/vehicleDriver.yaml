@@ -12,17 +12,31 @@ properties:
   damagedCarImages:
     maxItems: 8
     type: array
-    description: Bild vom Schaden
+    description: Bilder vom Schaden
     items:
-      format: base64
-      description: picture converted to base64 || native FileAPI des Clients (Dunkelverarbeitung)
+      type: object
+      properties:
+        file:
+          type: string
+          format: binary
+          description: Bild vom Schaden || native FileAPI des Clients (Dunkelverarbeitung)
+        path:
+          type: string
+          description: Pfad zum Bild
   damagedWindowImages:
     maxItems: 8
     type: array
-    description: Bild vom Glasschaden
+    description: Bilder vom Glasschaden
     items:
-      format: base64
-      description: picture converted to base64 || native FileAPI des Clients (Dunkelverarbeitung)
+      type: object
+      properties:
+        file:
+          type: string
+          format: binary
+          description: Bild vom Glasschaden || native FileAPI des Clients (Dunkelverarbeitung)
+        path:
+          type: string
+          description: Pfad zum Bild
   driverDamagedpartsGraphic:
     type: string
     description: Auswahl der beschädigten Stellen
