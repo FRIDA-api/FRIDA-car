@@ -29,7 +29,7 @@ properties:
     description: PLZ
     example: "50181"
   accidentCity:
-    type: string 
+    type: string
     description: Ort
     example: Bedburg
   accidentStreetName:
@@ -41,7 +41,7 @@ properties:
     description: Hausnummer
     example: "1b"
   accidentDescription:
-    type: string  
+    type: string
     description: Unfallbeschreibung
   accidentPoliceNumber:
     type: string
@@ -83,18 +83,14 @@ properties:
     items:
       $ref: "witness.yaml"
   policyholder:
-    maxItems: 2
-    type: array
-    items:
-      $ref: "policyholder.yaml"
-  vehicleDriver:
-    maxItems: 2
-    type: array
-    items:
-      $ref: "vehicleDriver.yaml" 
+    description: Policyholder A
+    $ref: "policyholder.yaml"
+  otherPolicyholder:
+    description: Policyholder B
+    $ref: "policyholder.yaml"
 required:
   - policyholder
-  - vehicleDriver
+  - otherPolicyholder
   - propertyDamage
   - injuredPerson
   - witnessExists
