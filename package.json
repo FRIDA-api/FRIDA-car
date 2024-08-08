@@ -8,9 +8,11 @@
     "npm": "^8.3.2"
   },
   "devDependencies": {
-    "@mermaid-js/mermaid-cli": "^8.13.10"
+    "@mermaid-js/mermaid-cli": "^8.13.10",
+    "swagger-cli": "^4.0.4"
   },
   "scripts": {
+    "build-api-docs": "swagger-cli bundle FRIDA_claimsData.yaml -o docs/FRIDA_claimsData_full_en.yaml --type yaml",
     "mermaid": "mmdc -i sequence.mmd"
   },
   "repository": {
