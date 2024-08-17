@@ -82,6 +82,12 @@ properties:
     type: array
     items:
       $ref: "witness.yaml"
+  vehicleDriver:
+    description: Fahrer A
+    $ref: "vehicleDriver.yaml"
+  otherVehicleDriver:
+      description: Fahrer B
+      $ref: "vehicleDriver.yaml"
   policyholder:
     description: Policyholder A
     $ref: "policyholder.yaml"

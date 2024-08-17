@@ -27,7 +27,7 @@ jobs:
       run: |
         mkdir -p destination-repo
 
-        cp -f docs/FRIDA_claimsData_full_en.yaml destination-repo/marketplace/src/assets/api/pension-api.yaml
+        cp -f docs/FRIDA_claimsData_full_en.yaml destination-repo/marketplace/src/assets/api/carclaims.yaml
 
         cd destination-repo
 
