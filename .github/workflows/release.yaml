@@ -1,6 +1,6 @@
 name: Push API specification to marketplace
 
-on: 
+on:
   release:
     types: [published]
 
@@ -9,37 +9,37 @@ jobs:
     runs-on: ubuntu-latest
     container:
       image: redocly/cli
-    steps:      
-    - name: Checkout source repo
-      uses: actions/checkout@v4
-      
-    - name: Checkout destination repo
-      uses: actions/checkout@v4
-      with:
-        repository: FRIDA-api/marketplace
-        token: ${{ secrets.ACCESS_TOKEN_GITHUB }}
-        path: destination-repo
+    steps:
+      - name: Checkout source repo
+        uses: actions/checkout@v4
 
-    # - name: Resolve yaml references
-    #   run: redocly bundle FRIDA_PensionInformation_OA3_en.yaml --output tmp/openapi.yaml
+      - name: Checkout destination repo
+        uses: actions/checkout@v4
+        with:
+          repository: FRIDA-api/marketplace
+          token: ${{ secrets.ACCESS_TOKEN_GITHUB }}
+          path: destination-repo
 
-    - name: Copy files
-      run: |
-        mkdir -p destination-repo
+      # - name: Resolve yaml references
+      #   run: redocly bundle FRIDA_PensionInformation_OA3_en.yaml --output tmp/openapi.yaml
 
-        cp -f docs/FRIDA_claimsData_full_en.yaml destination-repo/marketplace/src/assets/api/carclaims.yaml
+      - name: Copy files
+        run: |
+          mkdir -p destination-repo
 
-        cd destination-repo
+          cp -f docs/FRIDA_claimsData_full_en.yaml destination-repo/marketplace/src/assets/api/carclaims.yaml
 
-        git config --global user.name "github-actions[bot]"
-        git config --global user.email "github-actions[bot]@users.noreply.github.com"
+          cd destination-repo
 
-        git add .
+          git config --global user.name "github-actions[bot]"
+          git config --global user.email "github-actions[bot]@users.noreply.github.com"
 
-        if git status | grep -q "Changes to be committed"
-        then
-          git commit -m "Copy api specification from claimsData-api" --allow-empty
-          git push origin main
-        else
-          echo "No changes detected"
-        fi
+          git add .
+
+          if git status | grep -q "Changes to be committed"
+          then
+            git commit -m "Copy api specification from claimsData-api" --allow-empty
+            git push origin main
+          else
+            echo "No changes detected"
+          fi
