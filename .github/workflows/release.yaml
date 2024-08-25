@@ -21,8 +21,8 @@ jobs:
           token: ${{ secrets.ACCESS_TOKEN_GITHUB }}
           path: destination-repo
 
-      # - name: Resolve yaml references
-      #   run: redocly bundle FRIDA_PensionInformation_OA3_en.yaml --output tmp/openapi.yaml
+      - name: Resolve yaml references
+        run: redocly bundle FRIDA_claimsData.yaml --output docs/FRIDA_claimsData_full_en.yaml
 
       - name: Copy files
         run: |
