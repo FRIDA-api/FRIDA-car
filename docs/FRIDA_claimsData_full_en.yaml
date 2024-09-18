@@ -181,6 +181,12 @@ components:
           type: array
           items:
             $ref: '#/components/schemas/Witness'
+        vehicleDriver:
+          description: Fahrer A
+          $ref: '#/components/schemas/VehicleDriver'
+        otherVehicleDriver:
+          description: Fahrer B
+          $ref: '#/components/schemas/VehicleDriver'
         policyholder:
           description: Policyholder A
           $ref: '#/components/schemas/Policyholder'
@@ -249,8 +255,6 @@ components:
       properties:
         personalInformation:
           $ref: '#/components/schemas/Person'
-        vehicleDriver:
-          $ref: '#/components/schemas/VehicleDriver'
         inputTaxDeduction:
           type: string
           description: Vorsteuerabzug ja/nein
