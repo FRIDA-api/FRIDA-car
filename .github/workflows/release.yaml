@@ -56,8 +56,5 @@ jobs:
         with:
           node-version: "20"
 
-      - name: Install Stoplight CLI
-        run: npm install -g @stoplight/cli
-
       - name: Push API Spec to Stoplight
-        run: npx @stoplight/cli@6 push --ci-token ${{ secrets.STOPLIGHT_API_TOKEN }}
+        run: npx @stoplight/cli@6 push docs/FRIDA_claimsData_full_en.yaml --ci-token ${{ secrets.STOPLIGHT_API_TOKEN }}
