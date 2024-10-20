@@ -44,3 +44,20 @@ jobs:
           else
             echo "No changes detected"
           fi
+  push-api-spec:
+    runs-on: ubuntu-latest
+
+    steps:
+      - name: Checkout repository
+        uses: actions/checkout@v4
+
+      - name: Install Node.js
+        uses: actions/setup-node@v4
+        with:
+          node-version: "20"
+
+      - name: Install Stoplight CLI
+        run: npm install -g @stoplight/cli
+
+      - name: Push API Spec to Stoplight
+        run: npx @stoplight/cli@6 push --ci-token ${{ secrets.STOPLIGHT_API_TOKEN }}
