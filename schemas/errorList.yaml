@@ -1,5 +1,6 @@
 
 description: Error object
+type: object
 properties:
   errors:
     type: array
@@ -22,6 +23,7 @@ properties:
         meta:
           type: object
           description: Optional additional data for specific error types
+        additionalProperties: false
 required:
   - errors
-type: object
+additionalProperties: false

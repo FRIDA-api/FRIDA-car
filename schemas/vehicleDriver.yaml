@@ -1,4 +1,5 @@
 description: Holds all information of a `Vehicle Driver`.
+type: object
 properties:
   personalInformation:
     $ref: "person.yaml"
@@ -23,6 +24,7 @@ properties:
         path:
           type: string
           description: Pfad zum Bild
+      additionalProperties: false
   damagedWindowImages:
     maxItems: 8
     type: array
@@ -37,6 +39,7 @@ properties:
         path:
           type: string
           description: Pfad zum Bild
+      additionalProperties: false
   driverDamagedpartsGraphic:
     type: array
     description: Auswahl der beschädigten Stellen
@@ -98,4 +101,4 @@ properties:
     type: string
     description: Werkstatt Standort
     example: 50°56’28.8″N 6°57’30.0
-type: object
+additionalProperties: false

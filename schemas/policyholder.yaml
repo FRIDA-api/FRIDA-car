@@ -1,6 +1,7 @@
 description: Holds all information of a `Policyholder`.
+type: object
 properties:
-  personalInformation: 
+  personalInformation:
     $ref: "person.yaml"
   inputTaxDeduction:
     type: string
@@ -34,7 +35,7 @@ properties:
     description: Fahrzeug-Identifizierungsnummer || will be extracted from <Policy Pass>
     example: "W0L000051T2123456"
   currentMileage:
-    type: integer 
+    type: integer
     description: aktueller Kilometerstand
     example: 1200
   greencardNumber:
@@ -51,4 +52,4 @@ properties:
       - not_specified
       - "false"
       - "true"
-type: object
+additionalProperties: false

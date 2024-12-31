@@ -1,4 +1,5 @@
 description: Holds all information of a Person who could either be a `Witness`, or a part of a `Policyholder` or `Vehicle Driver`.
+type: object
 properties:
   formOfAdress:
     type: string
@@ -46,4 +47,4 @@ properties:
     type: string
     description: E-Mail Adresse
     example: example@gmail.com
-type: object
+additionalProperties: false

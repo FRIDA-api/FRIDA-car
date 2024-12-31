@@ -1,4 +1,5 @@
 description: Holds all information required for submitting a `Comprehensive Claim` to the insurance company.
+type: object
 properties:
   language:
     type: string
@@ -97,4 +98,4 @@ required:
   - hasVehicleDamage
   - injuredPerson
   - witnessExists
-type: object
+additionalProperties: false

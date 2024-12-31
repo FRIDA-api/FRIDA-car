@@ -86,6 +86,7 @@ components:
   schemas:
     Claimsdata:
       description: Holds all information required for submitting a `Comprehensive Claim` to the insurance company.
+      type: object
       properties:
         language:
           type: string
@@ -184,9 +185,10 @@ components:
         - hasVehicleDamage
         - injuredPerson
         - witnessExists
-      type: object
+      additionalProperties: false
     Person:
       description: 'Holds all information of a Person who could either be a `Witness`, or a part of a `Policyholder` or `Vehicle Driver`.'
+      type: object
       properties:
         formOfAdress:
           type: string
@@ -234,9 +236,10 @@ components:
           type: string
           description: E-Mail Adresse
           example: example@gmail.com
-      type: object
+      additionalProperties: false
     Policyholder:
       description: Holds all information of a `Policyholder`.
+      type: object
       properties:
         personalInformation:
           $ref: '#/components/schemas/Person'
@@ -289,7 +292,7 @@ components:
             - not_specified
             - 'false'
             - 'true'
-      type: object
+      additionalProperties: false
     Witness:
       description: Holds all information of a `Witness`.
       properties:
@@ -297,6 +300,7 @@ components:
           $ref: '#/components/schemas/Person'
     VehicleDriver:
       description: Holds all information of a `Vehicle Driver`.
+      type: object
       properties:
         personalInformation:
           $ref: '#/components/schemas/Person'
@@ -321,6 +325,7 @@ components:
               path:
                 type: string
                 description: Pfad zum Bild
+            additionalProperties: false
         damagedWindowImages:
           maxItems: 8
           type: array
@@ -335,6 +340,7 @@ components:
               path:
                 type: string
                 description: Pfad zum Bild
+            additionalProperties: false
         driverDamagedpartsGraphic:
           type: array
           description: Auswahl der beschädigten Stellen
@@ -396,9 +402,10 @@ components:
           type: string
           description: Werkstatt Standort
           example: 50°56’28.8″N 6°57’30.0
-      type: object
+      additionalProperties: false
     ErrorList:
       description: Error object
+      type: object
       properties:
         errors:
           type: array
@@ -421,9 +428,10 @@ components:
               meta:
                 type: object
                 description: Optional additional data for specific error types
+              additionalProperties: false
       required:
         - errors
-      type: object
+      additionalProperties: false
   requestBodies:
     Claimdata:
       content:
