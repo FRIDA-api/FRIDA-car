@@ -23,7 +23,7 @@ properties:
         meta:
           type: object
           description: Optional additional data for specific error types
-        additionalProperties: false
+      additionalProperties: false
 required:
   - errors
 additionalProperties: false
