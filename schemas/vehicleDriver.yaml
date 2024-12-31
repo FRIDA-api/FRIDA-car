@@ -12,12 +12,13 @@ properties:
   damagedCarImages:
     maxItems: 8
     type: array
-    description: Bilder vom Schaden 1234
+    description: Bilder vom Schaden
     items:
       type: object
       properties:
         file:
-          type: object
+          type: string
+          format: byte
           description: Bild vom Schaden || native FileAPI des Clients (Dunkelverarbeitung)
         path:
           type: string
@@ -30,7 +31,8 @@ properties:
       type: object
       properties:
         file:
-          type: object
+          type: string
+          format: byte
           description: Bild vom Glasschaden || native FileAPI des Clients (Dunkelverarbeitung)
         path:
           type: string
