@@ -33,3 +33,31 @@ put:
     "200":
       description: Fetched a Claim-Data-Set by PolicyNumber
       $ref: "../FRIDA_claimsData.yaml#/components/responses/Claimdata"
+post:
+  operationId: createClaimByPID
+  summary: Create Claim by PID
+  description: Create Claim by PID
+  # security:
+  #   - oAuth2:
+  #       - create_Claims
+  tags:
+    - Claims
+  parameters:
+    - $ref: "../parameters/policyNumber.yaml"
+  requestBody:
+        $ref: "../FRIDA_claimsData.yaml#/components/requestBodies/Claimdata"
+  responses:
+    '201':
+      $ref: "../FRIDA_claimsData.yaml#/components/responses/Claimdata"
+    "403":
+      description: Authorization error
+      content:
+        application/json:
+          schema:
+            $ref: "../schemas/errorList.yaml"
+    "500":
+      description: Generic Error
+      content:
+        application/json:
+          schema:
+            $ref: "../schemas/errorList.yaml"

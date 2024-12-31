@@ -26,8 +26,6 @@ externalDocs:
   description: Hier folgt noch ein Verweis auf die externe Doku
   url: "http://swagger.io"
 paths:
-  /claimsdata:
-    $ref: paths/claims.yaml
   /claimsdata/{policyNumber}:
     $ref: paths/claims_queries.yaml
     parameters:
