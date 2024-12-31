@@ -322,6 +322,7 @@ components:
                 type: string
                 format: byte
                 description: Bild vom Schaden || native FileAPI des Clients (Dunkelverarbeitung)
+                example: iVBORw0KGgoAAAANSUhEUgAAAAUA
               path:
                 type: string
                 description: Pfad zum Bild
@@ -337,6 +338,7 @@ components:
                 type: string
                 format: byte
                 description: Bild vom Glasschaden || native FileAPI des Clients (Dunkelverarbeitung)
+                example: iVBORw0KGgoAAAANSUhEUgAAAAUA
               path:
                 type: string
                 description: Pfad zum Bild
