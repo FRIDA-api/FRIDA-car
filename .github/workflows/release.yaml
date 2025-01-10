@@ -24,6 +24,12 @@ jobs:
       - name: Resolve yaml references
         run: redocly bundle FRIDA_claimsData.yaml --output docs/FRIDA_claimsData_full_en.yaml
 
+      - name: Upload API Spec
+        uses: actions/upload-artifact@v4
+        with:
+          name: api-spec
+          path: docs/FRIDA_claimsData_full_en.yaml
+
       - name: Copy files to marketplace
         run: |
           mkdir -p destination-repo
@@ -44,17 +50,25 @@ jobs:
           else
             echo "No changes detected"
           fi
+
   push-api-spec:
+    needs: copy-files-to-marketplace
     runs-on: ubuntu-latest
 
     steps:
       - name: Checkout repository
         uses: actions/checkout@v4
 
+      - name: Download API Spec
+        uses: actions/download-artifact@v3
+        with:
+          name: api-spec
+          path: docs/
+
       - name: Install Node.js
         uses: actions/setup-node@v4
         with:
-          node-version: "20"
+          node-version: "22"
 
       - name: Push API Spec to Stoplight
-        run: npx @stoplight/cli@6 push docs/FRIDA_claimsData_full_en.yaml --ci-token ${{ secrets.STOPLIGHT_API_TOKEN }} --branch main
+        run: npx @stoplight/cli@6 push docs/FRIDA_claimsData_full_en.yaml --ci-token ${{ secrets.STOPLIGHT_API_TOKEN }} --branch main --force
