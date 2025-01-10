@@ -6,7 +6,7 @@ on:
       - master
 
 jobs:
-  copy-file:
+  copy-files-to-marketplace:
     runs-on: ubuntu-latest
     container:
       image: redocly/cli
@@ -24,7 +24,7 @@ jobs:
       - name: Resolve yaml references
         run: redocly bundle FRIDA_claimsData.yaml --output docs/FRIDA_claimsData_full_en.yaml
 
-      - name: Copy files
+      - name: Copy files to marketplace
         run: |
           mkdir -p destination-repo
 
@@ -57,4 +57,4 @@ jobs:
           node-version: "20"
 
       - name: Push API Spec to Stoplight
-        run: npx @stoplight/cli@6 push docs/FRIDA_claimsData_full_en.yaml --ci-token ${{ secrets.STOPLIGHT_API_TOKEN }}
+        run: npx @stoplight/cli@6 push docs/FRIDA_claimsData_full_en.yaml --ci-token ${{ secrets.STOPLIGHT_API_TOKEN }} --branch main
