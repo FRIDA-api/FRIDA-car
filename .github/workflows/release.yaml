@@ -59,8 +59,13 @@ jobs:
       - name: Checkout repository
         uses: actions/checkout@v4
 
+      - name: List available artifacts
+        run: |
+          echo "Available artifacts:"
+          ls -la ${{ runner.temp }}/_temp_artifacts
+
       - name: Download API Spec
-        uses: actions/download-artifact@v3
+        uses: actions/download-artifact@v4
         with:
           name: api-spec
           path: docs/
