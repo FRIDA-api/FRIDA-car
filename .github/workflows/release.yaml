@@ -71,4 +71,4 @@ jobs:
           node-version: "22"
 
       - name: Push API Spec to Stoplight
-        run: npx @stoplight/cli@6 push docs/FRIDA_claimsData_full_en.yaml --ci-token ${{ secrets.STOPLIGHT_API_TOKEN }} --branch main
+        run: npx @stoplight/cli@6 push docs/FRIDA_claimsData_full_en.yaml --ci-token ${{ secrets.STOPLIGHT_API_TOKEN }} --project-id ${{ secrets.STOPLIGHT_PROJECT_ID }} --workspace-id ${{ secrets.STOPLIGHT_WORKSPACE_ID }} --branch main
