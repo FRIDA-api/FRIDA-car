@@ -71,4 +71,4 @@ jobs:
           node-version: "22"
 
       - name: Push API Spec to Stoplight
-        run: npx @stoplight/cli@6 push --directory docs --ci-token ${{ secrets.STOPLIGHT_API_TOKEN }} --branch main
+        run: npx @stoplight/cli@6 push --directory docs --ci-token ${{ secrets.STOPLIGHT_API_TOKEN }} --branch main --verbose
