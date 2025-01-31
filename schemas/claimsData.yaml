@@ -73,7 +73,7 @@ properties:
       - not_specified
       - "false"
       - "true"
-  witnessNumber:
+  witnessCount:
     type: string
     description: Anzahl Zeugen
   witness:

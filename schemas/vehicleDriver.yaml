@@ -78,20 +78,18 @@ properties:
       - "true"
       - "false"
   damageCausedBy:
-    type: array
     description: Auswahl der Schadenursache
-    items:
-      type: string
-      enum:
-        - Auffahren
-        - Rangieren/Parken
-        - Missachtung der Vorfahrt
-        - Abbiegen
-        - Abkommen von der Fahrbahn
-        - Überholvorgang
-        - Spurwechsel
-        - Sonstiges
-      example: Auffahren
+    type: string
+    enum:
+      - Auffahren
+      - Rangieren/Parken
+      - Missachtung der Vorfahrt
+      - Abbiegen
+      - Abkommen von der Fahrbahn
+      - Überholvorgang
+      - Spurwechsel
+      - Sonstiges
+    example: Auffahren
   typeOfWildlife:
     type: string
     description: Tierart
