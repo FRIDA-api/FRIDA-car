@@ -1,9 +1,9 @@
 description: Holds all information required for submitting a `Comprehensive Claim` to the insurance company.
 type: object
 properties:
-  claimsDetails:
+  carclaimsDetails:
     description: Holds detailed information of the claim
-    $ref: "claimsDetails.yaml"
+    $ref: "carclaimsDetails.yaml"
   hasVehicleDamage:
     type: string
     description: weitere Sachschäden ja/nein
