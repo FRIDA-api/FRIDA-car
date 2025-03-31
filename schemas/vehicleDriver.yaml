@@ -49,15 +49,16 @@ properties:
       type: string
       enum:
         - vorne links
-        - Seite vorne links
-        - Fahrertür links
-        - hintere Tür links
-        - Seite hinten links
-        - hinten links
         - vorne rechts
+        - Seite vorne links
         - Seite vorne rechts
+        - Fahrertür links
         - Beifahrertür rechts
+        - hintere Tür links
+        - hintere Tür rechts
+        - Seite hinten links
         - Seite hinten rechts
+        - hinten links
         - hinten rechts
         - Motorhaube
         - Frontscheibe
