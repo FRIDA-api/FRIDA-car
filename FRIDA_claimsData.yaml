@@ -34,6 +34,8 @@ components:
   schemas:
     Claimsdata:
       $ref: schemas/claimsData.yaml
+    Claimsdetails:
+      $ref: schemas/claimsDetails.yaml
     Person:
       $ref: schemas/person.yaml
     Policyholder:
@@ -45,13 +47,13 @@ components:
     ErrorList:
       $ref: schemas/errorList.yaml
   requestBodies:
-    Claimdata:
+    Claimsdata:
       content:
         application/json:
           schema:
             $ref: schemas/claimsData.yaml
   responses:
-    Claimdata:
+    Claimsdata:
       description: Creates a new Claims-Data-Set
       content:
         application/json:

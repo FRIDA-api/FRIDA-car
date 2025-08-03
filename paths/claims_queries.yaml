@@ -28,11 +28,11 @@ put:
   parameters:
     - $ref: "../parameters/policyNumber.yaml"
   requestBody:
-    $ref: "../FRIDA_claimsData.yaml#/components/requestBodies/Claimdata"
+    $ref: "../FRIDA_claimsData.yaml#/components/requestBodies/Claimsdata"
   responses:
     "200":
       description: Fetched a Claim-Data-Set by PolicyNumber
-      $ref: "../FRIDA_claimsData.yaml#/components/responses/Claimdata"
+      $ref: "../FRIDA_claimsData.yaml#/components/responses/Claimsdata"
 post:
   operationId: createClaimByPID
   summary: Create Claim by PID
@@ -45,10 +45,10 @@ post:
   parameters:
     - $ref: "../parameters/policyNumber.yaml"
   requestBody:
-        $ref: "../FRIDA_claimsData.yaml#/components/requestBodies/Claimdata"
+        $ref: "../FRIDA_claimsData.yaml#/components/requestBodies/Claimsdata"
   responses:
     '201':
-      $ref: "../FRIDA_claimsData.yaml#/components/responses/Claimdata"
+      $ref: "../FRIDA_claimsData.yaml#/components/responses/Claimsdata"
     "403":
       description: Authorization error
       content:

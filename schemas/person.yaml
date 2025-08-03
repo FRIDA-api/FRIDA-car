@@ -8,6 +8,7 @@ properties:
       - not_specified
       - Herr
       - Frau
+      - Divers
   title:
     type: string
     description: Titel
