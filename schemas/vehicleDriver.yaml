@@ -48,24 +48,43 @@ properties:
     items:
       type: string
       enum:
-        - vorne links
-        - vorne rechts
-        - Seite vorne links
-        - Seite vorne rechts
-        - Fahrertür links
-        - Beifahrertür rechts
-        - hintere Tür links
-        - hintere Tür rechts
-        - Seite hinten links
-        - Seite hinten rechts
-        - hinten links
-        - hinten rechts
         - Motorhaube
-        - Frontscheibe
         - Dach
+        - Kofferraum/Heckklappe
+        - Kühlergrill
+        - Linke Fahrzeugseite
+        - Rechte Fahrzeugseite
+        - Vorderer Stoßfänger
+        - Hinterer Stoßfänger
+        - Fahrertür (vorne links)
+        - Beifahrertür (vorne rechts)
+        - Hintere linke Tür
+        - Hintere rechte Tür
+        - Vorderrad links
+        - Vorderrad rechts
+        - Hinterrad links
+        - Hinterrad rechts
+        - Windschutzscheibe
         - Heckscheibe
-        - Kofferraum
-      example: hinten links
+        - Seitenscheibe (vorne links)
+        - Seitenscheibe (vorne rechts)
+        - Seitenscheibe (hinten links)
+        - Seitenscheibe (hinten rechts)
+        - Linker Außenspiegel
+        - Rechter Außenspiegel
+        - Frontscheinwerfer links
+        - Frontscheinwerfer rechts
+        - Heckscheinwerfer links
+        - Heckscheinwerfer rechts
+        - Griffschalen (vorne links)
+        - Griffschalen (vorne rechts)
+        - Griffschalen (hinten links)
+        - Griffschalen (hinten rechts)
+        - Schweller links
+        - Schweller rechts
+        - Kotflügel links
+        - Kotflügel rechts
+      example: Vorderer Stoßfänger
   driverVisibleDamage:
     type: string
     description: Beschreibung sichtbare Schäden
